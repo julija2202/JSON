@@ -1,0 +1,166 @@
+JSON
+ 1. Создать внешний репозиторий c названием JSON.
+    *click "new"
+    *enter repository name "JSON"
+    *click "create repository"
+
+ 2. Клонировать репозиторий JSON на локальный компьютер.
+    *git clone https://github.com/julija2202/JSON.git
+    *ls -la
+
+ 3. Внутри локального JSON создать файл “new.json” 
+    *в терминале вводим - touch new.json
+    *ls -la
+
+ 4. Добавить файл под гит
+    *git status
+        display:
+           On branch main
+           Your branch is up to date with 'origin/main'.
+           Untracked files:
+           (use "git add <file>..." to include in what will be committed)
+           new.json
+           nothing added to commit but untracked files present (use "git add" to track) 
+    *git add new.json
+    *git status
+        display:
+           On branch main
+           Your branch is up to date with 'origin/main'.
+           Changes to be committed:
+           (use "git restore --staged <file>..." to unstage)
+             new file:   new.json  )
+
+ 5. Закоммитить файл.
+     *git commit -m "add new.json"
+         display:
+           [main a845d7c] add new.json
+           1 file changed, 0 insertions(+), 0 deletions(-)
+           create mode 100644 new.json 
+
+ 6. Отправить файл на внешний GitHub репозиторий.
+    *git push
+         display:
+            Enumerating objects: 4, done.
+            Counting objects: 100% (4/4), done.
+            Delta compression using up to 4 threads
+            Compressing objects: 100% (2/2), done.
+            Writing objects: 100% (3/3), 282 bytes | 141.00 KiB/s, done.
+            Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+            To https://github.com/julija2202/JSON.git
+            0beef7a..a845d7c  main -> main)  - файл успешно отправлен в репозиторий
+
+ 7. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+     cat > new.json
+     { "ФИО":"Яголович Юлия Валерьевна"
+       "Возраст":"34"
+       "Количество домашних животных":"1"
+       "Будущая желаемая зарплата":"450$" }
+     ctrl + c
+
+ 8. Отправить изменения на внешний репозиторий.
+      *git add new.json
+      *git commit -m "add_3 new.json"
+          display:
+              [main cce7462] add_3 new.json
+              1 file changed, 2 insertions(+)
+      *git push
+          display:
+              Enumerating objects: 5, done.
+              Counting objects: 100% (5/5), done.
+              Delta compression using up to 4 threads
+              Compressing objects: 100% (3/3), done.
+              Writing objects: 100% (3/3), 315 bytes | 157.00 KiB/s, done.
+              Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+              remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+              To https://github.com/julija2202/JSON.git
+              4dcc29b..cce7462  main -> main
+
+ 9. Создать файл preferences.json
+      *touch preferances.json
+
+10. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
+  cat > preferances.json
+     { "Любимый фильм":"1000 слов"
+       "Любимый сериал":"Отчаянные домохозяйки"
+       "Любимая еда":"Драники"
+       "Любимое время года":"Лето"
+       "Страна,которую хочу посетить":"Америка" }
+
+11. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+cat > skills.json
+     { "протоколы":"Postman"
+       "мобильное тестирование":"Android studio"
+       "терминал":"Git bash"
+       "система управления версиями":"git"
+       "базы данных":"SQL"
+       "сниффинг трафика":"Charles, Fiddler" }
+
+12. Отправить сразу 2 файла на внешний репозиторий.
+     *git add .
+     *git commit -m "add skills and preferances"
+           display:
+              [main 4e25fdb] add skills and preferances
+              2 files changed, 10 insertions(+)
+              create mode 100644 preferances.json
+              create mode 100644 skills.json
+     *git push
+           display:
+              Enumerating objects: 5, done.
+              Counting objects: 100% (5/5), done.
+              Delta compression using up to 4 threads
+              Compressing objects: 100% (4/4), done.
+              Writing objects: 100% (4/4), 669 bytes | 334.00 KiB/s, done.
+              Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+              To https://github.com/julija2202/JSON.git
+              cce7462..4e25fdb  main -> main
+
+13. На веб интерфейсе создать файл bug_report.json.
+     *add file
+     *create new file
+     *enter file name "bug_report"
+
+14. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+     *click "commit new file"
+
+15. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+     *click file "bug_report"
+     *click "edit this file"
+          display:
+              { "id":"1"
+                "summary":"В поле - Where to search - не вводится более 10 символов"
+                "description":"В поле - Where to search - нет возможности ввести путь файла, который состоит из более 10 символов"
+                "expected result":"В поле - Where to search - указываем начальный каталог или набор каталогов FS на неограниченную глубину вложенности"
+                "actual result":"В поле - Where to search - не можем указать начальный каталог или набор каталогов FS на неограниченную глубину вложенности"
+                "requirements":"3пункт"
+                "steps to reproduce":"1.Запустить приложение 2.В поле - Where to search - ввести путь файла, состоящий из более 10 символов"
+                "symptom":"Missing feature"
+                "severity":"critical"
+                "priority":"ASAP"
+                "attachments":"-"
+              }
+
+16. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+     *enter in  "add an optional extended description" - "write bug_report"
+     *click "commit changes"
+17. Синхронизировать внешний и локальный репозиторий JSON
+     *cd JSON
+     *git fetch
+         display:
+             remote: Enumerating objects: 7, done.
+             remote: Counting objects: 100% (7/7), done.
+             remote: Compressing objects: 100% (5/5), done.
+             remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+             Unpacking objects: 100% (6/6), 1.68 KiB | 6.00 KiB/s, done.
+             From https://github.com/julija2202/JSON
+             4e25fdb..d3aff9f  main       -> origin/main
+     *git pull
+         display:
+             Updating 4e25fdb..d3aff9f
+             Fast-forward
+             bug_report.json | 13 +++++++++++++
+             1 file changed, 13 insertions(+)
+             create mode 100644 bug_report.json
+
+
+
+
